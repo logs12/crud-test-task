@@ -1,0 +1,6 @@
+{
+    "ROOT_URL": "",
+    "API": {
+        "baseURL": "https://reqres.in/api/"
+    }
+}

@@ -1,3 +1,22 @@
+Write a SPA application pagination user list with features:
+detailed viewing of a specific user from the list;
+creating a new user;
+old user updates;
+delete user.
+Layout must be made up without using frameworks.
+
+Be sure to use:
+React
+Redux
+Redux-saga.
+
+API
+GET https://reqres.in/api/users?page=1 - list of users with pagination
+GET https://reqres.in/api/users/2 - user from the list (by user id)
+POST https://reqres.in/api/users - add
+PUT https://reqres.in/api/users/2 - update
+DELETE https://reqres.in/api/users/2 - removal
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

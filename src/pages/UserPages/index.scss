@@ -1,0 +1,27 @@
+.term-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+  }
+  
+  .term-grid label {
+    font-weight: 800;
+  }
+  
+  .grid-header {
+    text-decoration: underline;
+    border-bottom: unset; 
+  }
+  .users-list__create-link {
+    display: block;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  .term-grid__item-a {
+      display: block;
+      cursor: pointer;
+      margin: 10px 0;
+  }

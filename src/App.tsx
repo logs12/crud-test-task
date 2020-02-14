@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router'
+import { Route, Switch } from 'react-router-dom';
+import UsersPage from 'pages/UserPages';
+import ViewUserPage from 'pages/UserPages/ViewUserPage';
+import CreateUserPage from 'pages/UserPages/CreateUserPage';
+import EditUserPage from 'pages/UserPages/EditUserPage';
+import Routes from 'routes';
+import store, { history } from 'store';
 
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
+                <Switch>
+                    <Route exact { ...Routes.ROOT } component={UsersPage} />
+                    <Route { ...Routes.USER_VIEW } component={ViewUserPage} />
+                    <Route { ...Routes.USER_CREATE } component={CreateUserPage} />
+                    <Route { ...Routes.USER_EDIT } component={EditUserPage} />
+                </Switch>
+            </ConnectedRouter>
+        </Provider>
+    )
+};
 
 export default App;
